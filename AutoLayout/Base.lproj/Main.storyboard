@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rQE-P6-zm6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auto Layout-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Understanding" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-jC-Vpf">
+                                <rect key="frame" x="20" y="86" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Gjt-ow-C7Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="e2J-Zp-QWs">
+                                <rect key="frame" x="20" y="115" width="560" height="485"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Auto Layout dynamically calculates the size and position of all the views in your view hierarchy, based on constraints placed on those views. For example, you can constrain a button so that it is horizontally centered with an Image view and so that the button’s top edge always remains 8 points below the image’s bottom. If the image view’s size or position changes, the button’s position automatically adjusts to match.
+
+This constraint-based approach to design allows you to build user interfaces that dynamically respond to both internal and external changes.  External Changes
+
+External changes occur when the size or shape of your superview changes. With each change, you must update the layout of your view hierarchy to best use the available space. Here are some common sources of external change:
+
+The user resizes the window (OS X).
+The user enters or leaves Split View on an iPad (iOS).
+The device rotates (iOS).
+The active call and audio recording bars appear or disappear (iOS).
+You want to support different size classes.
+You want to support different screen sizes.
+Most of these changes can occur at runtime, and they require a dynamic response from your app. Others, like support for different screen sizes, represent the app adapting to different environments. Even through the screen size won’t typically change at runtime, creating an adaptive interface lets your app run equally well on an iPhone 4S, an iPhone 6 Plus, or even an iPad. Auto Layout is also a key component for supporting Slide Over and Split Views on the iPad.
+
+Internal Changes
+
+Internal changes occur when the size of the views or controls in your user interface change.
+
+Here are some common sources of internal change:
+
+The content displayed by the app changes.
+The app supports internationalization.
+The app supports Dynamic Type (iOS).
+When your app’s content changes, the new content may require a different layout than the old. This commonly occurs in apps that display text or images. For example, a news app needs to adjust its layout based on the size of the individual news articles. Similarly, a photo collage must handle a wide range of image sizes and aspect ratios.
+
+Internationalization is the process of making your app able to adapt to different languages, regions, and cultures. The layout of an internationalized app must take these differences into account and appear correctly in all the languages and regions that the app supports.
+
+Internationalization has three main effects on layout. First, when you translate your user interface into a different language, the labels require a different amount of space. German, for example, typically requires considerably more space than English. Japanese frequently requires much less.
+
+Second, the format used to represent dates and numbers can change from region to region, even if the language does not change. Although these changes are typically more subtle than the language changes, the user interface still needs to adapt to the slight variation in size.
+
+Third, changing the language can affect not just the size of the text, but the organization of the layout as well. Different languages use different layout directions. English, for example, uses a left-to-right layout direction, and Arabic and Hebrew use a right-to-left layout direction. In general, the order of the user interface elements should match the layout direction. If a button is in the bottom-right corner of the view in English, it should be in the bottom left in Arabic.
+
+Finally, if your iOS app supports dynamic type, the user can change the font size used in your app. This can change both the height and the width of any textual elements in your user interface. If the user changes the font size while your app is running, both the fonts and the layout must adapt.</string>
+                                <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e2J-Zp-QWs" firstAttribute="top" secondItem="nZt-jC-Vpf" secondAttribute="bottom" constant="8" id="19S-0f-WVi"/>
+                            <constraint firstItem="nZt-jC-Vpf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ayc-KZ-Rdf"/>
+                            <constraint firstItem="e2J-Zp-QWs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JrP-hl-bWi"/>
+                            <constraint firstItem="nZt-jC-Vpf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="PcE-Mw-Tgx"/>
+                            <constraint firstItem="nZt-jC-Vpf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="Pza-jB-0DQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e2J-Zp-QWs" secondAttribute="bottom" id="T4Y-dd-YRc"/>
+                            <constraint firstItem="e2J-Zp-QWs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Vey-im-1fi"/>
+                            <constraint firstItem="e2J-Zp-QWs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xnd-e3-BQp"/>
+                            <constraint firstItem="nZt-jC-Vpf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pX5-if-qeR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Auto Layout" id="LUl-pf-KHh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="268"/>
+        </scene>
+        <!--Show Labels View Controller-->
+        <scene sceneID="Trs-t4-fdm">
+            <objects>
+                <viewController storyboardIdentifier="ShowLabels" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Va1-zV-Zaf" customClass="ShowLabelsViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iG5-G8-Xki"/>
+                        <viewControllerLayoutGuide type="bottom" id="fxG-EO-2pa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Oq-7b-FkN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Centralized left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbn-iJ-wdg">
+                                <rect key="frame" x="13" y="289" width="206" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="206" id="wG2-e5-nnn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Centralized bottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luS-YS-Jed">
+                                <rect key="frame" x="20" y="559" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Centralized right" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMb-4D-Pf0">
+                                <rect key="frame" x="374" y="289" width="206" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="206" id="vlu-Ih-aJW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Centralized top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WR-Bk-Rhq">
+                                <rect key="frame" x="20" y="79" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dbn-iJ-wdg" firstAttribute="centerY" secondItem="9Oq-7b-FkN" secondAttribute="centerY" id="0TJ-BX-9MN"/>
+                            <constraint firstItem="Dbn-iJ-wdg" firstAttribute="leading" secondItem="9Oq-7b-FkN" secondAttribute="leadingMargin" constant="-7" id="4d8-hc-FRg"/>
+                            <constraint firstItem="fxG-EO-2pa" firstAttribute="top" secondItem="Dbn-iJ-wdg" secondAttribute="bottom" constant="290" id="7HO-Ez-Eom"/>
+                            <constraint firstItem="2WR-Bk-Rhq" firstAttribute="leading" secondItem="9Oq-7b-FkN" secondAttribute="leadingMargin" id="91b-BN-smp"/>
+                            <constraint firstItem="luS-YS-Jed" firstAttribute="centerX" secondItem="9Oq-7b-FkN" secondAttribute="centerX" id="9JA-yd-X4g"/>
+                            <constraint firstItem="luS-YS-Jed" firstAttribute="trailing" secondItem="9Oq-7b-FkN" secondAttribute="trailingMargin" id="D0s-dD-lbb"/>
+                            <constraint firstItem="pMb-4D-Pf0" firstAttribute="centerY" secondItem="9Oq-7b-FkN" secondAttribute="centerY" id="J5A-bX-0OY"/>
+                            <constraint firstItem="pMb-4D-Pf0" firstAttribute="centerY" secondItem="9Oq-7b-FkN" secondAttribute="centerY" id="LqF-at-uEb"/>
+                            <constraint firstItem="pMb-4D-Pf0" firstAttribute="top" secondItem="2WR-Bk-Rhq" secondAttribute="bottom" constant="189" id="PdQ-vG-yYS"/>
+                            <constraint firstItem="Dbn-iJ-wdg" firstAttribute="centerY" secondItem="9Oq-7b-FkN" secondAttribute="centerY" id="V4y-FS-K0q"/>
+                            <constraint firstItem="2WR-Bk-Rhq" firstAttribute="top" secondItem="iG5-G8-Xki" secondAttribute="bottom" constant="15" id="abO-ME-xya"/>
+                            <constraint firstItem="2WR-Bk-Rhq" firstAttribute="centerX" secondItem="9Oq-7b-FkN" secondAttribute="centerX" id="eva-rq-nB6"/>
+                            <constraint firstItem="pMb-4D-Pf0" firstAttribute="trailing" secondItem="9Oq-7b-FkN" secondAttribute="trailingMargin" id="hix-xi-gsJ"/>
+                            <constraint firstItem="fxG-EO-2pa" firstAttribute="top" secondItem="luS-YS-Jed" secondAttribute="bottom" constant="20" id="iiE-hg-MbA"/>
+                            <constraint firstItem="Dbn-iJ-wdg" firstAttribute="top" secondItem="2WR-Bk-Rhq" secondAttribute="bottom" constant="189" id="mTJ-Tx-UNN"/>
+                            <constraint firstItem="2WR-Bk-Rhq" firstAttribute="trailing" secondItem="9Oq-7b-FkN" secondAttribute="trailingMargin" id="w8k-4j-0BP"/>
+                            <constraint firstItem="luS-YS-Jed" firstAttribute="leading" secondItem="9Oq-7b-FkN" secondAttribute="leadingMargin" id="xrw-1C-6hY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0TJ-BX-9MN"/>
+                                <exclude reference="mTJ-Tx-UNN"/>
+                                <exclude reference="LqF-at-uEb"/>
+                                <exclude reference="PdQ-vG-yYS"/>
+                                <exclude reference="7HO-Ez-Eom"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lam-jo-reg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1698" y="268"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FBb-Ci-dYT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rQE-P6-zm6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gKS-rf-djA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cIC-j9-YTO">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VuI-hz-J5n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iro-tK-Qvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394" y="268"/>
+        </scene>
+    </scenes>
+</document>
